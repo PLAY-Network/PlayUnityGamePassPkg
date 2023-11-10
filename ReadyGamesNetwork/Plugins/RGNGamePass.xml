@@ -46,7 +46,7 @@
             <param name="id">The identifier of the game pass to delete from the user. Optional.</param>
             <param name="requestName">The request name associated with the game pass. Optional.</param>
             <param name="userId">The identifier of the user from whom the game pass will be deleted. Optional.</param>
-            <returns>A list of GamePassData objects representing the remaining game passes after the deletion.</returns>
+            <returns>A list of GamePassUserData objects representing the deleted game passes.</returns>
         </member>
         <member name="M:RGN.Modules.GamePass.GamePassModule.GetAsync(System.String,System.String)">
             <summary>
