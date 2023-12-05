@@ -167,12 +167,12 @@
         </member>
         <member name="F:RGN.Modules.GamePass.GamePassUserData.createdBy">
             <summary>
-            Identifier for the user who created the Game Pass.
+            Identifier of the user who created the Game Pass. User Id. Populated by the backend.
             </summary>
         </member>
         <member name="F:RGN.Modules.GamePass.GamePassUserData.updatedBy">
             <summary>
-            Identifier for the user who last updated the Game Pass.
+            Identifier of the user who last updated the Game Pass. User Id. Populated by the backend.
             </summary>
         </member>
         <member name="T:RGN.Modules.GamePass.GetForCurrentAppResponseData">
