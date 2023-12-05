@@ -141,12 +141,12 @@
         </member>
         <member name="F:RGN.Modules.GamePass.GamePassUserData.id">
             <summary>
-            Unique identifier for the Game Pass user id.
+            Unique identifier of the Game Pass user id.
             </summary>
         </member>
         <member name="F:RGN.Modules.GamePass.GamePassUserData.gamePassId">
             <summary>
-            Unique identifier for the Game Pass.
+            Unique identifier of the Game Pass.
             </summary>
         </member>
         <member name="F:RGN.Modules.GamePass.GamePassUserData.createdAt">
