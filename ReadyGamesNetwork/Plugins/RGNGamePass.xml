@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RGNGamePass</name>
+    </assembly>
+    <members>
+        <member name="T:RGN.Modules.GamePass.GamePassModule">
+            <summary>
+            Handles the game pass related operations for the Ready Games Network (RGN) SDK.
+            </summary>
+        </member>
+        <member name="T:RGN.Modules.GamePass.GamePassModule.Admin">
+            <summary>
+            Handles critical operations for game passes
+            </summary>
+        </member>
+        <member name="M:RGN.Modules.GamePass.GamePassModule.Admin.AddAsync(RGN.Modules.GamePass.GamePassData)">
+            <summary>
+            Adds a new GamePassData to the Ready Games Network asynchronously.
+            </summary>
+            <param name="gamepassData">The GamePassData object to add.</param>
+            <returns>The added GamePassData object after the operation completes.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if gamepassData is null.</exception>
+        </member>
+        <member name="M:RGN.Modules.GamePass.GamePassModule.Admin.DeleteAsync(System.String,System.String)">
+            <summary>
+            Deletes a GamePassData from the Ready Games Network asynchronously based on the provided identifier or request name.
+            </summary>
+            <param name="id">The unique identifier for the game pass to delete. Optional.</param>
+            <param name="requestName">The request name associated with the game pass to delete. Optional.</param>
+            <returns>The deleted GamePassData object after the operation completes.</returns>
+        </member>
+        <member name="M:RGN.Modules.GamePass.GamePassModule.Admin.AddToUserAsync(System.String,System.String,System.String)">
+            <summary>
+            Adds a game pass to a user asynchronously in the Ready Games Network.
+            </summary>
+            <param name="id">The game pass identifier to add to the user. Optional.</param>
+            <param name="requestName">The request name associated with the game pass. Optional.</param>
+            <param name="userId">The identifier of the user to whom the game pass will be added. Optional.</param>
+            <returns>The GamePassUserData object representing the user's game pass data after the operation completes.</returns>
+        </member>
+        <member name="M:RGN.Modules.GamePass.GamePassModule.Admin.DeleteFromUserAsync(System.String,System.String,System.String)">
+            <summary>
+            Deletes a game pass from a user asynchronously in the Ready Games Network.
+            </summary>
+            <param name="id">The identifier of the game pass to delete from the user. Optional.</param>
+            <param name="requestName">The request name associated with the game pass. Optional.</param>
+            <param name="userId">The identifier of the user from whom the game pass will be deleted. Optional.</param>
+            <returns>A list of GamePassUserData objects representing the deleted game passes.</returns>
+        </member>
+        <member name="M:RGN.Modules.GamePass.GamePassModule.GetAsync(System.String,System.String)">
+            <summary>
+            Retrieves a GamePassData instance asynchronously based on the provided identifier or request name.
+            </summary>
+            <param name="id">The unique identifier for the game pass to retrieve. Optional.</param>
+            <param name="requestName">The request name associated with the game pass to retrieve. Optional.</param>
+            <returns>The requested GamePassData instance.</returns>
+        </member>
+        <member name="M:RGN.Modules.GamePass.GamePassModule.GetForCurrentAppAsync">
+            <summary>
+            Retrieves a list of GamePassData instances for the current application asynchronously.
+            </summary>
+            <returns>A list of GamePassData associated with the current application.</returns>
+        </member>
+        <member name="M:RGN.Modules.GamePass.GamePassModule.GetForUserAsync(System.String,System.String,System.String)">
+            <summary>
+            Retrieves a list of GamePassUserData instances for a user based on the provided identifier or request name.
+            </summary>
+            <param name="id">The game pass identifier to retrieve for the user. Optional.</param>
+            <param name="requestName">The request name associated with the game pass. Optional.</param>
+            <param name="userId">The identifier of the user to retrieve game passes for. Optional.</param>
+            <returns>A list of GamePassUserData instances for the specified user.</returns>
+        </member>
+        <member name="M:RGN.Modules.GamePass.GamePassModule.GetAllForUserAsync(System.String)">
+            <summary>
+            Retrieves all GamePassUserData instances for a specified user asynchronously.
+            </summary>
+            <param name="userId">The identifier of the user to retrieve all game passes for. Optional.</param>
+            <returns>A list of all GamePassUserData instances for the specified user.</returns>
+        </member>
+        <member name="T:RGN.Modules.GamePass.GamePassData">
+            <summary>
+            Represents a Game Pass in the Ready Games Network (RGN) with its associated properties.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassData.id">
+            <summary>
+            Unique identifier for the Game Pass.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassData.appIds">
+            <summary>
+            List of application identifiers that are included in this Game Pass.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassData.requestName">
+            <summary>
+            The name used for server requests related to this Game Pass.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassData.name">
+            <summary>
+            The display name of the Game Pass.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassData.description">
+            <summary>
+            Detailed description of the Game Pass.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassData.createdAt">
+            <summary>
+            The UNIX timestamp representing when the Game Pass was created.
+            in milliseconds since midnight, January 1, 1970 UTC.
+            Refer to <see cref="T:RGN.Utility.DateTimeUtility"/> for helper methods.
+            This field is automatically populated by the backend
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassData.updatedAt">
+            <summary>
+            The UNIX timestamp representing when the Game Pass was last updated.
+            in milliseconds since midnight, January 1, 1970 UTC.
+            Refer to <see cref="T:RGN.Utility.DateTimeUtility"/> for helper methods.
+            This field is automatically populated by the backend
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassData.createdBy">
+            <summary>
+            Identifier for the user who created the Game Pass.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassData.updatedBy">
+            <summary>
+            Identifier for the user who last updated the Game Pass.
+            </summary>
+        </member>
+        <member name="T:RGN.Modules.GamePass.GamePassUserData">
+            <summary>
+            Represents a Game Pass in the Ready Games Network (RGN) with its associated properties.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassUserData.id">
+            <summary>
+            Unique identifier for the Game Pass user id.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassUserData.gamePassId">
+            <summary>
+            Unique identifier for the Game Pass.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassUserData.createdAt">
+            <summary>
+            The UNIX timestamp representing when the Game Pass was created.
+            in milliseconds since midnight, January 1, 1970 UTC.
+            Refer to <see cref="T:RGN.Utility.DateTimeUtility"/> for helper methods.
+            This field is automatically populated by the backend
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassUserData.updatedAt">
+            <summary>
+            The UNIX timestamp representing when the Game Pass was last updated.
+            in milliseconds since midnight, January 1, 1970 UTC.
+            Refer to <see cref="T:RGN.Utility.DateTimeUtility"/> for helper methods.
+            This field is automatically populated by the backend
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassUserData.createdBy">
+            <summary>
+            Identifier for the user who created the Game Pass.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassUserData.updatedBy">
+            <summary>
+            Identifier for the user who last updated the Game Pass.
+            </summary>
+        </member>
+        <member name="T:RGN.Modules.GamePass.GetForCurrentAppResponseData">
+            <summary>
+            Represents the response data received when requesting Game Pass data for the current application.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GetForCurrentAppResponseData.gamePasses">
+            <summary>
+            The list of GamePassData objects associated with the current application.
+            </summary>
+        </member>
+        <member name="T:RGN.Modules.GamePass.GetGamePassUserDataResponseData">
+            <summary>
+            Represents the response data received when requesting Game Pass user data.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GetGamePassUserDataResponseData.gamePasses">
+            <summary>
+            The list of GamePassUserData objects detailing the game passes associated with a user.
+            </summary>
+        </member>
+    </members>
+</doc>
