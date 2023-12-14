@@ -108,6 +108,18 @@
             Detailed description of the Game Pass.
             </summary>
         </member>
+        <member name="F:RGN.Modules.GamePass.GamePassData.setBy">
+            <summary>
+            Defines who can add/remove the Game Pass to/from the user:
+            - `client` - the client and the server can add/remove the Game Pass to/from the user.
+            - `server` - only the server can add/remove the Game Pass to/from the user.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassData.linkedVirtualItems">
+            <summary>
+            List of virtual item identifiers that are providing this game pass when purchased.
+            </summary>
+        </member>
         <member name="F:RGN.Modules.GamePass.GamePassData.createdAt">
             <summary>
             The UNIX timestamp representing when the Game Pass was created.
