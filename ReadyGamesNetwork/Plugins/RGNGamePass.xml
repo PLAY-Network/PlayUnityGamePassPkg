@@ -149,6 +149,11 @@
             Unique identifier of the Game Pass.
             </summary>
         </member>
+        <member name="F:RGN.Modules.GamePass.GamePassUserData.quantity">
+            <summary>
+            How many game passes the user have in inventory
+            </summary>
+        </member>
         <member name="F:RGN.Modules.GamePass.GamePassUserData.createdAt">
             <summary>
             The UNIX timestamp representing when the Game Pass was created.
