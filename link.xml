@@ -1,4 +1,0 @@
-<linker>
-    <assembly fullname="GamePassData" preserve="all" />
-    <assembly fullname="GamePassUserData" preserve="all" />
-</linker>
