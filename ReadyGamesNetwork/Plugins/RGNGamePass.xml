@@ -108,6 +108,18 @@
             Detailed description of the Game Pass.
             </summary>
         </member>
+        <member name="F:RGN.Modules.GamePass.GamePassData.setBy">
+            <summary>
+            Defines who can add/remove the Game Pass to/from the user:
+            - `client` - the client and the server can add/remove the Game Pass to/from the user.
+            - `server` - only the server can add/remove the Game Pass to/from the user.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassData.linkedVirtualItems">
+            <summary>
+            List of virtual item identifiers that are providing this game pass when purchased.
+            </summary>
+        </member>
         <member name="F:RGN.Modules.GamePass.GamePassData.createdAt">
             <summary>
             The UNIX timestamp representing when the Game Pass was created.
@@ -141,12 +153,17 @@
         </member>
         <member name="F:RGN.Modules.GamePass.GamePassUserData.id">
             <summary>
-            Unique identifier for the Game Pass user id.
+            Unique identifier of the Game Pass user id.
             </summary>
         </member>
         <member name="F:RGN.Modules.GamePass.GamePassUserData.gamePassId">
             <summary>
-            Unique identifier for the Game Pass.
+            Unique identifier of the Game Pass.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.GamePass.GamePassUserData.quantity">
+            <summary>
+            How many game passes the user have in inventory
             </summary>
         </member>
         <member name="F:RGN.Modules.GamePass.GamePassUserData.createdAt">
@@ -167,12 +184,12 @@
         </member>
         <member name="F:RGN.Modules.GamePass.GamePassUserData.createdBy">
             <summary>
-            Identifier for the user who created the Game Pass.
+            Identifier of the user who created the Game Pass. User Id. Populated by the backend.
             </summary>
         </member>
         <member name="F:RGN.Modules.GamePass.GamePassUserData.updatedBy">
             <summary>
-            Identifier for the user who last updated the Game Pass.
+            Identifier of the user who last updated the Game Pass. User Id. Populated by the backend.
             </summary>
         </member>
         <member name="T:RGN.Modules.GamePass.GetForCurrentAppResponseData">

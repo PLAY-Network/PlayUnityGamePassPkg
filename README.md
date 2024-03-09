@@ -1,2 +1,2 @@
 # RGN GamePass
-Package version: 0.8.0
+Package version: 0.9.0
