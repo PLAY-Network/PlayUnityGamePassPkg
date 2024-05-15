@@ -14,68 +14,76 @@
             Handles critical operations for game passes
             </summary>
         </member>
-        <member name="M:RGN.Modules.GamePass.GamePassModule.Admin.AddAsync(RGN.Modules.GamePass.GamePassData)">
+        <member name="M:RGN.Modules.GamePass.GamePassModule.Admin.AddAsync(RGN.Modules.GamePass.GamePassData,System.Threading.CancellationToken)">
             <summary>
             Adds a new GamePassData to the Ready Games Network asynchronously.
             </summary>
             <param name="gamepassData">The GamePassData object to add.</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>The added GamePassData object after the operation completes.</returns>
             <exception cref="T:System.ArgumentNullException">Thrown if gamepassData is null.</exception>
         </member>
-        <member name="M:RGN.Modules.GamePass.GamePassModule.Admin.DeleteAsync(System.String,System.String)">
+        <member name="M:RGN.Modules.GamePass.GamePassModule.Admin.DeleteAsync(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Deletes a GamePassData from the Ready Games Network asynchronously based on the provided identifier or request name.
             </summary>
             <param name="id">The unique identifier for the game pass to delete. Optional.</param>
             <param name="requestName">The request name associated with the game pass to delete. Optional.</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>The deleted GamePassData object after the operation completes.</returns>
         </member>
-        <member name="M:RGN.Modules.GamePass.GamePassModule.Admin.AddToUserAsync(System.String,System.String,System.String)">
+        <member name="M:RGN.Modules.GamePass.GamePassModule.Admin.AddToUserAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Adds a game pass to a user asynchronously in the Ready Games Network.
             </summary>
             <param name="id">The game pass identifier to add to the user. Optional.</param>
             <param name="requestName">The request name associated with the game pass. Optional.</param>
             <param name="userId">The identifier of the user to whom the game pass will be added. Optional.</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>The GamePassUserData object representing the user's game pass data after the operation completes.</returns>
         </member>
-        <member name="M:RGN.Modules.GamePass.GamePassModule.Admin.DeleteFromUserAsync(System.String,System.String,System.String)">
+        <member name="M:RGN.Modules.GamePass.GamePassModule.Admin.DeleteFromUserAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Deletes a game pass from a user asynchronously in the Ready Games Network.
             </summary>
             <param name="id">The identifier of the game pass to delete from the user. Optional.</param>
             <param name="requestName">The request name associated with the game pass. Optional.</param>
             <param name="userId">The identifier of the user from whom the game pass will be deleted. Optional.</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>A list of GamePassUserData objects representing the deleted game passes.</returns>
         </member>
-        <member name="M:RGN.Modules.GamePass.GamePassModule.GetAsync(System.String,System.String)">
+        <member name="M:RGN.Modules.GamePass.GamePassModule.GetAsync(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Retrieves a GamePassData instance asynchronously based on the provided identifier or request name.
             </summary>
             <param name="id">The unique identifier for the game pass to retrieve. Optional.</param>
             <param name="requestName">The request name associated with the game pass to retrieve. Optional.</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>The requested GamePassData instance.</returns>
         </member>
-        <member name="M:RGN.Modules.GamePass.GamePassModule.GetForCurrentAppAsync">
+        <member name="M:RGN.Modules.GamePass.GamePassModule.GetForCurrentAppAsync(System.Threading.CancellationToken)">
             <summary>
             Retrieves a list of GamePassData instances for the current application asynchronously.
             </summary>
+            <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>A list of GamePassData associated with the current application.</returns>
         </member>
-        <member name="M:RGN.Modules.GamePass.GamePassModule.GetForUserAsync(System.String,System.String,System.String)">
+        <member name="M:RGN.Modules.GamePass.GamePassModule.GetForUserAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Retrieves a list of GamePassUserData instances for a user based on the provided identifier or request name.
             </summary>
             <param name="id">The game pass identifier to retrieve for the user. Optional.</param>
             <param name="requestName">The request name associated with the game pass. Optional.</param>
             <param name="userId">The identifier of the user to retrieve game passes for. Optional.</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>A list of GamePassUserData instances for the specified user.</returns>
         </member>
-        <member name="M:RGN.Modules.GamePass.GamePassModule.GetAllForUserAsync(System.String)">
+        <member name="M:RGN.Modules.GamePass.GamePassModule.GetAllForUserAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Retrieves all GamePassUserData instances for a specified user asynchronously.
             </summary>
             <param name="userId">The identifier of the user to retrieve all game passes for. Optional.</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>A list of all GamePassUserData instances for the specified user.</returns>
         </member>
         <member name="T:RGN.Modules.GamePass.GamePassData">
