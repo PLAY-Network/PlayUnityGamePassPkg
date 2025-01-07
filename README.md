@@ -1,2 +1,1 @@
-# Play SDK GamePass
-Package version: 0.16.0-dev.10
+# Play SDK Game Pass
