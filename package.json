@@ -1,5 +1,5 @@
 ﻿{
-  "name": "io.play.unity.gamepass",
+  "name": "network.theplay.unity.gamepass",
   "displayName": "PLAY SDK. Game Pass",
   "version": "0.16.0",
   "unity": "2020.3",
@@ -30,6 +30,6 @@
   ],
   "samples": [],
   "dependencies": {
-    "io.play.unity.core": "0.16.0"
+    "network.theplay.unity.core": "0.16.0"
   }
 }
